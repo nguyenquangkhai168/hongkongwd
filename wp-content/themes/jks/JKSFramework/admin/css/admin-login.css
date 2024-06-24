@@ -1,0 +1,58 @@
+#login h1 a {
+  background-image: url(../images/logo.png) !important;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 300px auto;
+  display: block;
+  outline: 0 none;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 100%;
+}
+.login {
+  font-family: Tahoma, sans-serif;
+}
+.login label, .login #backtoblog, .login #nav {
+  font-size: 13px !important;
+  font-weight: bold !important;
+}
+#login {
+  margin: auto;
+  padding: 4% 0 0;
+  width: 330px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.login form .input {
+  border: none;
+  padding: 10px;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  background-color: #fff;
+  border-left: 4px solid #0276b5;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.wp-core-ui .button-primary {
+  background: #0276b5;
+  border-color: #0276b5;
+  box-shadow: none;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-shadow: none;
+}
+.wp-core-ui .button-primary:hover, .wp-core-ui .button-primary.focus, .wp-core-ui .button-primary:focus {
+  background: #0276b5;
+  border-color: #0276b5;
+  box-shadow: none;
+}
+.wp-core-ui .button.button-large, .wp-core-ui .button-group.button-large .button {
+  height: 40px;
+  line-height: 40px;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 100%;
+}

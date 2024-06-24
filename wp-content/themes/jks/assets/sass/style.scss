@@ -1,0 +1,138 @@
+$main-color: #8db3b6;
+$sub-color: #557678;
+@import "font";
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    background: #fff;
+    color: #000;
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    max-width: 100%;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+.entry-content {
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+}
+.btn {
+    background-color: $main-color;
+    color: white;
+    border-radius: 8px;
+}
+.popup-wrapper {
+    background: rgba(33, 37, 41, 0.45);
+    display: none;
+    z-index: 999;
+    .search-popup {
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        max-width: 600px;
+        width: calc(100% - 24px);
+    }
+}
+ul.page-numbers {
+    display: inline-block;
+    white-space: nowrap;
+    clear: both;
+    margin: 1px;
+    li {
+        display: inline-block;
+        span.current {
+            background-color: #c4c4c4;
+            color: black;
+        }
+        a,
+        span {
+            display: inline-block;
+            border-radius: 3px;
+            padding: 11px;
+            color: black;
+            background-color: white;
+        }
+        a:hover {
+            background-color: #c4c4c4;
+            color: black;
+        }
+    }
+}
+.form-control {
+    &:focus {
+        box-shadow: none;
+        border-color: $main-color;
+    }
+}
+.limit-text {
+    &-1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    &-2 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+.hk-pagination {
+    text-align: center;
+    .pagenavi {
+        display: inline-flex;
+        .page-numbers {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 0 4px;
+            color: #000;
+            &.current,
+            &:hover {
+                border-color: $main-color;
+                background: $main-color;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@import "header";
+@import "home";
+@import "about";
+@import "footer";
+@import "hotline";
+@import "blog";
+@import "album";
+@import "contact";

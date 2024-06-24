@@ -1,0 +1,217 @@
+.header {
+    z-index: 999;
+    background: $main-color;
+    &__top {
+        background: $sub-color;
+        font-size: 14px;
+        padding: 6px 0;
+        &-item {
+            justify-content: flex-end;
+            .icon-box {
+                margin-right: 6px;
+                font-size: 12px;
+            }
+            .separate {
+                width: 1px;
+                height: 1rem;
+                background: #fff;
+                margin: 0 12px;
+            }
+        }
+    }
+    &__desktop {
+        &-nav {
+            .main-nav {
+                & > li {
+                    padding: 5px 15px;
+                    position: relative;
+                    transition: 0.3s all;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        width: 1px;
+                        border-left: 1px dashed white;
+                        height: 15px;
+                        margin-top: -7px;
+                        left: 0em;
+                    }
+                    &:first-child {
+                        &::after {
+                            border-left: none;
+                        }
+                    }
+                    &.current-menu-parent,
+                    &.current-menu-item {
+                        & > a {
+                            color: $sub-color;
+                        }
+                    }
+
+                    &:hover {
+                        background: white;
+                        & > a {
+                            color: $main-color;
+                        }
+                    }
+                    & > a {
+                        color: #fff;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+                    & > ul.sub-menu {
+                        min-width: 200px;
+                        display: none;
+                        list-style: none;
+                        position: absolute;
+                        left: 0;
+                        top: 34px;
+                        z-index: 5;
+                        width: 150px;
+                        padding-left: 0;
+                        transition: 0.3s linear;
+                        transform-origin: 50% 0;
+                        transition: 0.3s all;
+                        & > li {
+                            padding-left: 10px;
+                            padding-right: 10px;
+                            padding-top: 9px;
+                            padding-bottom: 9px;
+                            background-color: white;
+                            border-bottom: 1px dashed $main-color;
+                            transition: 0.3s all;
+                            &:last-child {
+                                padding-bottom: 10px;
+                                border-bottom: none;
+                            }
+                            & > a {
+                                color: black;
+                            }
+                            &:hover {
+                                background-color: $main-color;
+                                & > a {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        ul.sub-menu {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        &-logo {
+            img {
+                position: absolute;
+                width: 90px;
+                padding: 10px 6px 6px;
+                background: #8db3b6;
+                height: auto;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &__search {
+        &--btn {
+            background: none;
+            right: 0;
+            border: none;
+            i {
+                font-size: 20px;
+                color: white;
+            }
+        }
+    }
+    &__mobile {
+        &-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        &-nav {
+            .action-nav {
+                width: 52px;
+            }
+        }
+        &-navcontent {
+            display: none;
+            width: 100vw;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            & > ul {
+                background-color: $main-color;
+                & > li {
+                    text-align: center;
+                    & > a {
+                        color: #fff;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .action-nav {
+            margin-left: 12px;
+            max-width: 400px;
+            margin: 0 auto;
+            .btn {
+                padding: 8px;
+                border-radius: 8px;
+                color: #fff;
+                img {
+                    margin-right: 6px;
+                }
+                &-upload {
+                    background: #00a3ff;
+                }
+                &-register {
+                    background: #ff8d08;
+                    margin-right: 4px;
+                    width: calc(50% - 4px);
+                }
+                &-login {
+                    background: #5d10ff;
+                    margin-left: 4px;
+                    width: calc(50% - 4px);
+                }
+            }
+            .hamburger-menu {
+                color: #fff;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .header {
+        &__top {
+            &-item {
+                justify-content: center;
+            }
+        }
+        &__mobile {
+            &-logo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        &__mobile {
+            &-logo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}

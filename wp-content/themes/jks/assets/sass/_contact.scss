@@ -1,0 +1,36 @@
+.hk-contact {
+    padding: 50px 0px;
+    &__adress {
+        justify-content: space-between;
+        .address-item {
+            width: 49%;
+            h4 {
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+            .map-box {
+                aspect-ratio: 1 / 0.75;
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            li i {
+                color: $sub-color;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .hk-contact {
+        &__adress {
+            .address-item {
+                width: 100%;
+                &:first-child {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.contact-fix {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    z-index: 99;
+    ul > li {
+        .jks {
+            border-radius: 50%;
+            display: block;
+            width: 45px;
+            height: 45px;
+            box-shadow: 0 0 5px #888;
+            border: 2px solid #fff;
+            transition: 0.3s;
+            &-zalo {
+                background: url(../images/zalo.png) center center no-repeat;
+                background-size: 30px;
+                background-color: $main-color;
+            }
+            &-face {
+                background: url(../images/messenger.png) center center no-repeat;
+                background-size: 30px;
+                background-color: $main-color;
+            }
+            &-hotline {
+                background: url(../images/phone.png) center center no-repeat;
+                background-size: 32px;
+                background-color: $main-color;
+            }
+            &:hover {
+                background-color: $sub-color;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}

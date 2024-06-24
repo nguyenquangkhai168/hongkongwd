@@ -1,0 +1,53 @@
+.footer {
+    box-shadow: 0 0 2px #9b9b9b;
+    background-color: $main-color;
+    margin-top: 2px;
+    padding: 50px 0 0;
+    &__main {
+        &--servive {
+            ul {
+                li {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+        &--contact {
+            ul {
+                li {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .sub_menu {
+            position: relative;
+            padding-top: 1rem;
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 1px;
+                background: white;
+            }
+            li {
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+    &__copyrighter {
+        &--hr {
+            margin-top: 10px;
+            border-top: 1px solid white;
+            em {
+                font-size: 13px;
+            }
+        }
+    }
+}

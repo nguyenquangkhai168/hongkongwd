@@ -1,0 +1,24 @@
+#macy-container::before {
+	content: "";
+	display: table;
+	clear: both;
+}
+#macy-container {
+	margin-top: 22px;
+}
+#macy-container::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#macy-container .album {
+	margin-bottom: 24px;
+	overflow: hidden;
+}
+
+#macy-container .album-image {
+	width: 100%;
+	display: block;
+	height: auto;
+}
